@@ -5,3 +5,4 @@ optional-django==0.1.0
 pillow==10.3.0
 sqlparse==0.4.4
 tzdata==2023.4
+gunicorn
