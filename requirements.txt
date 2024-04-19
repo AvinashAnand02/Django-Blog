@@ -1,0 +1,7 @@
+asgiref==3.7.2
+Django==5.0.1
+npm==0.1.1
+optional-django==0.1.0
+pillow==10.3.0
+sqlparse==0.4.4
+tzdata==2023.4
