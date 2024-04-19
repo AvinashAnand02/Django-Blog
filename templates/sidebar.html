@@ -1,0 +1,66 @@
+{% block sidebar %}
+
+<style>
+    .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        margin-top: 50px;
+    }
+
+    .card-header {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #dee2e6;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-text {
+        font-size: 16px;
+        color: #555;
+    }
+
+    .btn {
+        background-color: #0096FF;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #007bff;
+    }
+</style>
+
+<!-- Sidebar Widgets Column -->
+<div class="col-md-4 float-right">
+    <div class="card">
+        <h5 class="card-header">About Us</h5>
+        <div class="card-body">
+            <p class="card-text">This awesome blog is made on the top of our favorite full-stack framework 'Django'.</p>
+            <a href="{% url 'about' %}" class="btn btn-primary">Know more!</a>
+        </div>
+    </div>
+    <div class="card">
+        <h5 class="card-header">Privacy & Policy</h5>
+        <div class="card-body">
+            <p class="card-text">Our commitment to protecting your personal information and data privacy.</p>
+            <a href="{% url 'privacy' %}" class="btn btn-primary">Know more!</a>
+        </div>
+    </div>
+    <div class="card">
+        <h5 class="card-header">Visitors</h5>
+        <div class="card-body">
+            <p class="card-text">Number of visitors: {{ visit_counter.count }}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock sidebar %}

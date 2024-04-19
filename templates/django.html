@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            font-size: 18px;
+            background-color: #fdfdfd;
+            margin-top: 50px;
+        }
+
+        .head_text {
+            color: white;
+        }
+
+        .card {
+            box-shadow: 0 16px 48px #E3E7EB;
+        }
+    </style>
+
+    <header class="masthead text-center">
+        <div class="container">
+            <h1>Django Blog</h1>
+            <p class="lead">A platform to share your thoughts and ideas.</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8 mt-3 left">
+                {% for django in django_list %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ django.title }}</h2>
+                        <p class="card-text text-muted h6">{{ django.author }} | {{ django.created_on}} </p>
+                        <p class="card-text">{{django.content|slice:":200" }}</p>
+                        <a href="{% url 'django_detail' django.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+        </div>
+    </div>
+    {%endblock%}
+</body>
+
+</html>

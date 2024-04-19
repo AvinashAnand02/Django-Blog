@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form Submission Successful</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+            padding: 50px;
+            text-align: center;
+        }
+
+        .success-message {
+            background-color: #28a745; /* Green background */
+            color: #fff; /* White text color */
+            padding: 20px;
+            border-radius: 5px;
+            margin: 0 auto 20px auto; /* Centering the message */
+            max-width: 500px; /* Limiting message width */
+        }
+
+        .btn {
+            background-color: #007bff; /* Blue button */
+            border-color: #007bff; /* Blue border */
+            color: #fff; /* White text color */
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            border-color: #0056b3; /* Darker blue border on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="success-message">
+        <h2>Thank you for contacting us!</h2>
+        <p>We'll get back to you as soon as possible.</p>
+    </div>
+    <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin-top: 50px !important;
+            margin-bottom: 50px !important;
+        }
+        .row {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    {% for django in django_posts %}
+                    <div class="">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="card-title">{{ django.title }}</h2>
+                                <p class="card-text text-muted h6">
+                                    {{ django.author }} | {{ django.created_on}}
+                                </p>
+                                <p class="card-text">{{django.content|slice:":200" }}</p>
+                                <a href="{% url 'django_detail' django.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for development in development_posts %}
+                    <div class="">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="card-title">{{ development.title }}</h2>
+                                <p class="card-text text-muted h6">
+                                    {{ development.author }} | {{ development.created_on}}
+                                </p>
+                                <p class="card-text">{{development.content|slice:":200" }}</p>
+                                <a href="{% url 'development_detail' development.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for networking in networking_posts %}
+                    <div class="">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="card-title">{{ networking.title }}</h2>
+                                <p class="card-text text-muted h6">
+                                    {{ networking.author }} | {{ networking.created_on}}
+                                </p>
+                                <p class="card-text">{{networking.content|slice:":200" }}</p>
+                                <a href="{% url 'networking_detail' networking.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+                {% block sidebar %} 
+                {% include 'sidebar.html' %} 
+                {% endblock sidebar %}
+        </div>
+    </div>
+    {% endblock %}
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

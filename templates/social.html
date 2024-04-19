@@ -1,0 +1,76 @@
+{% block social%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome CDN for social icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      .outer-container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+
+      .inner-container {
+        width: 100%;
+        max-width: 80%;
+        position: relative;
+      }
+
+      .social-icons {
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
+      }
+
+      .social-icons a {
+        color: #333;
+        margin-bottom: 10px;
+        display: block;
+        text-decoration: none; /* Remove underline from links */
+        transition: color 0.3s ease; /* Add smooth transition for color change */
+      }
+
+      .social-icons a:hover {
+        color: #ff6600; /* Change color on hover for better interaction */
+      }
+
+      .social-icons a:last-child {
+        margin-bottom: 0; /* Remove margin from last icon for better alignment */
+      }
+
+      .social-icons a i {
+        font-size: 24px; /* Increase icon size for better visibility */
+        margin-right: 5px; /* Add spacing between icon and text */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <!-- Add your social icons here -->
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <div class="outer-container">
+      <div class="inner-container">
+        {% block content %}
+        <!-- Content goes here -->
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
+
+{% endblock %}

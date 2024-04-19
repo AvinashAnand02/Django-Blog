@@ -1,0 +1,115 @@
+{% extends 'base.html' %} {% block content %}
+<style>
+  .about-section h2,
+  .mission-section h3,
+  .values-section h3,
+  .contact-section h3 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .about-section p,
+  .mission-section p,
+  .contact-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .values-section ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .values-section li {
+    margin-bottom: 10px;
+  }
+
+  .values-section li strong {
+    font-weight: bold;
+  }
+
+  .contact-section p {
+    margin-bottom: 5px;
+  }
+
+  .contact-section p:last-child {
+    margin-bottom: 0;
+  }
+</style>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="about-section">
+        <h2>About Us</h2>
+        <p>
+          Welcome to GiggleGate! We are a passionate community of writers,
+          thinkers, and creators who love to share our thoughts and ideas with
+          the world. Our platform provides a space for individuals to express
+          themselves, connect with like-minded individuals, and engage in
+          meaningful discussions.
+        </p>
+        <p>
+          At GiggleGate, we believe in the power of storytelling. Whether
+          you're sharing personal experiences, discussing current events, or
+          exploring new ideas, our platform is here to support and amplify your
+          voice.
+        </p>
+        <p>
+          Our team is dedicated to creating a welcoming and inclusive
+          environment for all members of our community. We value diversity,
+          empathy, and respect, and strive to foster a positive and supportive
+          atmosphere for everyone.
+        </p>
+      </div>
+
+      <div class="mission-section">
+        <h3>Our Mission</h3>
+        <p>
+          Our mission at GiggleGate is to empower individuals to share their
+          voices, foster meaningful connections, and inspire positive change
+          through storytelling.
+        </p>
+      </div>
+
+      <div class="values-section">
+        <h3>Our Values</h3>
+        <ul>
+          <li>
+            <strong>Inclusivity:</strong> We celebrate diversity and welcome
+            individuals from all backgrounds and perspectives.
+          </li>
+          <li>
+            <strong>Empathy:</strong> We strive to understand and empathize with
+            the experiences and viewpoints of others.
+          </li>
+          <li>
+            <strong>Integrity:</strong> We uphold honesty, transparency, and
+            ethical standards in everything we do.
+          </li>
+          <li>
+            <strong>Community:</strong> We believe in the power of community and
+            the importance of supporting and uplifting one another.
+          </li>
+          <li>
+            <strong>Creativity:</strong> We encourage creative expression and
+            innovation in storytelling.
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-section">
+        <h3>Contact Us</h3>
+        <p>
+          If you have any questions, feedback, or suggestions, please don't
+          hesitate to contact us. We'd love to hear from you!
+        </p>
+        <p>Email: GiggleGate@gmail.com</p>
+        <p>Phone: +91-7739465519</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

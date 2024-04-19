@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the contact form */
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+            margin-bottom: 50px; /* Reduce margin */
+            border-radius: 30px !important; /* Add rounded corners */
+            overflow: hidden; /* Hide overflow */
+        }
+
+        .card-header {
+            background-color: #007bff !important; /* Blue header background */
+            color: #fff; /* White text color */
+            text-align: center; /* Center align the text */
+            padding: 20px 0; /* Add padding */
+        }
+
+        .btn-primary {
+            background-color: #007bff; /* Blue submit button */
+            border-color: #007bff; /* Blue border for button */
+            width: 100%; /* Make button full width */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            border-color: #0056b3; /* Darker blue border on hover */
+        }
+
+        .card-body {
+            padding: 20px; /* Add padding */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%; /* Make input fields full width */
+            padding: 10px; /* Add padding */
+            margin-bottom: 15px; /* Add margin */
+            border-radius: 5px; /* Add rounded corners */
+            border: 1px solid #ccc; /* Add border */
+        }
+
+        textarea {
+            height: 150px; /* Set textarea height */
+        }
+
+    </style>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="mb-0">Contact Us</h2>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

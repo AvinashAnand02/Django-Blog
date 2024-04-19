@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  body {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .outer-container {
+    display: flex;
+    justify-content: center;
+  }
+  .inner-container {
+    width: 100%;
+    max-width: 80%; 
+  }
+</style>
+<div class="outer-container">
+  <div class="inner-container">
+    <div class="row">
+      <div class="col-md-8 card mb-4 mt-3 left top">
+        <div class="card-body">
+          <a href="javascript:history.go(-1);"> <span style="font-size: 40px;">&#11176;</span> </a>
+          <h1>{% block title %}{{ object.title }}{% endblock title %}</h1>
+          <p class="text-muted">{{ development.author }} | {{ development.created_on }}</p>
+          <p class="card-text">{{ object.content | safe }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
