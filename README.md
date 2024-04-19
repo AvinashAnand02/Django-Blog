@@ -70,4 +70,18 @@ Check out the live demo of the application at [https://django-blog-pl3x.onrender
 ### License:
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
+<h2>📬 Contact</h2>
+
+If you want to contact me, you can reach me through below social handles.
+
+<div align="center">
+
+<a href="https://wa.me/7739465519" target="_blank">
+  <img alt="WhatsApp" src="https://img.shields.io/badge/WhatsApp-25D366.svg?style=for-the-badge&logo=WhatsApp&logoColor=white" />
+</a> <a  href="https://www.linkedin.com/in/avinash-anand02/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="https://twitter.com/Avinash52870643" target="_blank"><img src="https://img.shields.io/badge/twitter-%2300acee.svg?&style=for-the-badge&logo=twitter&logoColor=white&alt=twitter" /></a>
+<a href="mailto:avinashmgr53@gmail.com"><img  alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+
+</div>
+
 ---
