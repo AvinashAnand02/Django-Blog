@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+            padding: 50px;
+            text-align: center;
+            margin-top: 50px !important;
+        }
+        p {
+            font-size: 20px;
+        }
+        .star-container {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .btn {
+            background-color: #007bff; /* Blue button */
+            border-color: #007bff; /* Blue border */
+            color: #fff; /* White text color */
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            border-color: #0056b3; /* Darker blue border on hover */
+        }
+    </style>
+</head>
+
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <div class="container star-container">
+        <p>Show some love ❤️ by starring this repository!</p>
+        <a href="https://github.com/AvinashAnand02/Django-Blog" style="display: flex; justify-content: center; align-items: center;">
+            <img style="width: XXpx; height: XXpx;" src="https://github-readme-stats.vercel.app/api/pin/?username=AvinashAnand02&repo=Django-Blog&theme=buefy" alt="GitHub stars for Django-Blog" />
+          </a>   <br><br>       
+        <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+    </div>
+    {% endblock content %}
+</body>
+
+</html>

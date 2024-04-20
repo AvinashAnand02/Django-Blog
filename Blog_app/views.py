@@ -86,6 +86,8 @@ class DevelopmentDetail(generic.DetailView):
 class About(generic.TemplateView):
     template_name = 'about.html'
 
+class Support(generic.TemplateView):
+    template_name = 'support.html'
 
 class Privacy(generic.TemplateView):
     template_name = 'privacy.html'
