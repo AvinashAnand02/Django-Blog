@@ -11,6 +11,7 @@
             padding: 50px;
             text-align: center;
             margin-top: 50px !important;
+            margin-bottom: 50px !important;
         }
         p {
             font-size: 20px;
@@ -30,6 +31,40 @@
             background-color: #0056b3; /* Darker blue on hover */
             border-color: #0056b3; /* Darker blue border on hover */
         }
+
+        .avatar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .avatar-grid a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .username {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 9px;
+        }
     </style>
 </head>
 
@@ -40,7 +75,32 @@
         <p>Show some love ❤️ by starring this repository!</p>
         <a href="https://github.com/AvinashAnand02/Django-Blog" style="display: flex; justify-content: center; align-items: center;">
             <img style="width: XXpx; height: XXpx;" src="https://github-readme-stats.vercel.app/api/pin/?username=AvinashAnand02&repo=Django-Blog&theme=buefy" alt="GitHub stars for Django-Blog" />
-          </a>   <br><br>       
+        </a>   
+        <br><br>
+        <p>List of Stargazers 🌟</p>
+
+        <div class="avatar-grid">
+            <a href="https://github.com/priyanshuuranjan">
+                <div class="avatar">
+                    <img src="https://avatars.githubusercontent.com/u/117588084?v=4" alt="priyanshuuranjan">
+                </div>
+                <div class="username">Priyanshu Ranjan</div>
+            </a>
+            <a href="https://github.com/tushar-karn">
+                <div class="avatar">
+                    <img src="https://avatars.githubusercontent.com/u/113161622?v=4" alt="tushar-karn">
+                </div>
+                <div class="username">Tushar karn</div>
+            </a>
+            <a href="https://github.com/AvinashAnand02">
+                <div class="avatar">
+                    <img src="https://avatars.githubusercontent.com/u/82769201?v=4" alt="AvinashAnand02">
+                </div>
+                <div class="username">Avinash Anand</div>
+            </a>
+        </div>
+        <br><br>
+
         <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
     </div>
     {% endblock content %}
