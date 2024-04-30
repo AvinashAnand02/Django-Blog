@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Register</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #f0f0f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
             margin: 0;
             padding: 0;
             display: flex;
@@ -30,20 +30,21 @@
             display: block;
             margin-bottom: 5px;
             color: #666;
+            font-size: 14px;
         }
         input[type="text"],
+        input[type="email"],
         input[type="password"] {
             width: calc(100% - 20px);
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 14px;
         }
-        input[type="submit"] {
+        button {
             width: 100%;
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: #5c67f2;
             border: none;
             border-radius: 5px;
             color: white;
@@ -51,36 +52,30 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-        p {
-            text-align: center;
-        }
-        a {
-            color: #5c67f2;
+        button:hover {
+            background-color: #5058e2;
         }
     </style>
 </head>
 <body>
-    <form method="post" action="{% url 'login' %}">
+    <form method="post" action="{% url 'register' %}">
         {% csrf_token %}
-        <h1>Login</h1>
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" required>
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required>
-        </div>
-        <div>
-            <input type="submit" value="Login">
-            <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
-        </div>
-        {% if error %}
-            <p style="color: red;">{{ error }}</p>
-        {% endif %}
+        <h1>Register</h1>
+        <label for="id_username">Username</label>
+        <input type="text" name="username" id="id_username" required>
+
+        <label for="id_email">Email</label>
+        <input type="email" name="email" id="id_email" required>
+
+        <label for="id_password1">Password</label>
+        <input type="password" name="password1" id="id_password1" required>
+
+        <label for="id_password2">Confirm Password</label>
+        <input type="password" name="password2" id="id_password2" required>
+
+        <button type="submit">Register</button>
+
+        <p style="margin-top: 10px;">Already have an account? <a href="{% url 'login' %}">Login Now</a></p>
     </form>
 </body>
 </html>
