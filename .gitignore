@@ -1,0 +1,9 @@
+# bite compiled stuff
+# __pycache__/
+
+# django stuff
+# db.sqlite3
+
+# environment viriables
+.venv
+.env
