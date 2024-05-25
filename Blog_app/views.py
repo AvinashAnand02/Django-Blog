@@ -123,7 +123,7 @@ def contact_success_view(request):
 
 def create_post(request):
     if request.method == 'POST':
-        form = DjangoForm(request.POST)
+        form = DjangoForm(request.POST, request.FILES)
         if form.is_valid():
             category = form.cleaned_data['category']
             # Depending on the category selected, create the post for the corresponding model
